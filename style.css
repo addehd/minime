@@ -1,1 +1,26 @@
 /* Theme Name: Minime */
+
+header {
+	max-width: 80rem;
+	margin: auto; }
+
+.woocommerce ul { display: inline; }
+
+.woocommerce ul li {
+  float: right;
+  padding: 2rem;
+  text-decoration: none;
+  list-style: none; }
+
+.menu {
+  display: inline-block;
+  background: red; }
+
+.menu ul {
+	display: inline; }
+
+.menu ul li{
+	float: left;
+  padding: 2rem;
+  text-decoration: none;
+  list-style: none; }

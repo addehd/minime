@@ -4,12 +4,12 @@
 	<?php
 	while ( have_posts() ) : the_post();?>
 		<article class="post">
-		<!-- <h2 class="title"><?php the_title(); ?></h2> -->
+	  <h2><?php the_title(); ?></h2>
 		<section class="content"><?php the_content(); ?></section>
 		</article>
 	<?php
-	endwhile; 
-endif; 
+	endwhile;
+endif;
 ?>
 
 <?php get_footer(); ?>	

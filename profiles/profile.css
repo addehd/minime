@@ -1,0 +1,124 @@
+body { margin: 0; }
+
+.menu { display: none; }
+
+nav.woocommerce-MyAccount-navigation {
+  right: 0px;
+  position: absolute;
+  z-index: 10; }
+
+nav.woocommerce-MyAccount-navigation a { color: white; }
+
+.woocommerce ul { display: inline-block; }
+
+.woocommerce ul li {
+  float: left;
+  padding: 2rem;
+  text-decoration: none;
+  list-style: none;
+}
+
+.tred{ margin-bottom: -0.3rem;) }
+
+.fonts {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	background: #2db8ff;  }
+
+.font { max-width: 60%!important; }
+
+.right-font { background: #2db8ff; padding: 2rem;  }
+.fonts div {
+	flex: 1; }
+
+h1, h2, h3, h4 { font-family: 'Libre Franklin', sans-serif; }
+
+.wrap section { margin: 2rem 0; }
+
+.visitkort { 
+  color: black;
+  margin-top: -2rem;
+  margin-left: 1rem;
+  position: absolute; }
+
+.img-responsive { width: 100%; height: auto; }
+
+.wrap a { color: white; }
+
+.second-logo { display: flex; background: #eaeaea; }
+
+.second-logo div:first-child { flex: 2; }
+.second-logo div:nth-child(2){ flex: 1;
+	background: url(../profiles/1/img/mode/strat.jpg);
+	background-size: cover;  }
+
+
+.second-logo div { 
+	min-height: 40rem;
+  display: flex;
+	justify-content: center;
+	align-items: center; 
+	flex-direction: column; }
+
+.main-logo { 
+	background: #494949;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 40rem; }
+
+.wrap { 
+	margin: auto;
+	padding-bottom: 10vh;
+	max-width: 1400px; }
+
+.colors {
+	display: flex;
+	text-align: center;
+	max-width: 1400px;
+	min-height: 35rem;
+	margin: auto;
+	max-height: 40rem;
+	color: white; }
+
+.color {
+  display: block;
+  padding: 0.2rem;
+  padding-left: 1rem; }
+
+.tree { display: flex; flex-direction: column; }
+
+.tree div:firstchild{ background: red!important; }
+.colors div { width: 100%; flex: 1; }
+.colors div .green { background: #0ac834; position: relative; text-align: left; }
+.colors div .blue { background: #2db8ff; position: relative; text-align: left; }
+.colors .orange { background: #ffe603; position: relative; text-align: left; flex: 1; }
+
+#play {
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  margin-bottom: 2rem;
+  min-height: 50rem;
+  max-height: 60rem;
+  overflow: hidden; }
+
+#play video {
+  position: absolute;
+  width: 100%;
+  z-index: -100;
+	overflow: hidden;
+	filter: grayscale(100%); }
+
+#play { color: white; font-size: 1.4rem; }
