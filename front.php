@@ -2,6 +2,22 @@
 
 /* Template Name: Front */ ?>
 
+<?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
+
+<?php while ($the_query -> have_posts()) {
+
+	$the_query -> the_post();
+
+	echo get_the_post_thumbnail(); ?>
+
+	<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+
+	<?php the_excerpt(__('(more…)')); ?>
+
+<?php }
+
+wp_reset_postdata();
+?>
 
 <script>
 

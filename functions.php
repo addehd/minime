@@ -1,10 +1,11 @@
 <?php 
 
+add_theme_support( 'post-thumbnails' );
+
 function register_my_menu() {
   register_nav_menu( 'primary', __( 'Primary Menu', 'theme-slug' ) );
 }
 add_action( 'after_setup_theme', 'register_my_menu' );
-
 
 function wp_nav_menu_attributes_filter($var) {
 	return is_array($var) ? array_intersect($var, array('current-menu-item')) : '';
