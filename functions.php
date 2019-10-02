@@ -1,9 +1,26 @@
 <?php 
 
+function mainjs() {
+  wp_enqueue_script('main_js', get_template_directory_uri() . '/js/main.js', NULL, 1.0, true);
+
+  wp_localize_script('main_js', 'wpdata', array(
+    'nonce'=> wp_create_nonce('wp_rest')
+  ));
+}
+
+// Enable the option show in rest
+add_filter( 'acf/rest_api/field_settings/show_in_rest', '__return_true' );
+
+// Enable the option edit in rest
+add_filter( 'acf/rest_api/field_settings/edit_in_rest', '__return_true' );
+
+add_action('wp_enqueue_scripts', 'mainjs');
+
 function cc_mime_types($mimes) {
   $mimes['svg'] = 'image/svg+xml';
   return $mimes;
 }
+
 add_filter('upload_mimes', 'cc_mime_types');
 
 add_theme_support( 'post-thumbnails' );
