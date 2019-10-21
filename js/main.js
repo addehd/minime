@@ -18,7 +18,7 @@ displayHeading()
 
 var rubrik = document.querySelector('#rubrik')
 function createHtml(fieldData){
-	rubrik.innerText = fieldData[0].acf.rubrik
+	rubrik.innerText = fieldData[2].acf.rubrik
 }
 
 var addPostBtn = document.querySelector('#field_change')

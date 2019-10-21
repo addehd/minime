@@ -1,12 +1,25 @@
 <?php 
 
-function mainjs() {
-  wp_enqueue_script('main_js', get_template_directory_uri() . '/js/main.js', NULL, 1.0, true);
+function scripts() {
+  // wp_enqueue_script('main_js', get_template_directory_uri() . '/js/main.js', NULL, 1.0, true);
 
-  wp_localize_script('main_js', 'wpdata', array(
+  // wp_localize_script('main_js', 'wpdata', array(
+  //   'nonce'=> wp_create_nonce('wp_rest')
+  // ));
+
+  wp_enqueue_script('app_js', get_template_directory_uri() . '/js/app.js', NULL, 1.0, true);  
+
+  wp_enqueue_script('post_js', get_template_directory_uri() . '/js/post.js', NULL, 1.0, true);
+
+  wp_localize_script('post_js', 'wpdata', array(
     'nonce'=> wp_create_nonce('wp_rest')
   ));
+
 }
+add_action('wp_enqueue_scripts', 'scripts');
+
+
+
 
 // Enable the option show in rest
 add_filter( 'acf/rest_api/field_settings/show_in_rest', '__return_true' );
@@ -14,7 +27,6 @@ add_filter( 'acf/rest_api/field_settings/show_in_rest', '__return_true' );
 // Enable the option edit in rest
 add_filter( 'acf/rest_api/field_settings/edit_in_rest', '__return_true' );
 
-add_action('wp_enqueue_scripts', 'mainjs');
 
 function cc_mime_types($mimes) {
   $mimes['svg'] = 'image/svg+xml';
