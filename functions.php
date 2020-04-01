@@ -16,9 +16,13 @@ function scripts() {
   ));
 
 }
-add_action('wp_enqueue_scripts', 'scripts');
+//add_action('wp_enqueue_scripts', 'scripts');
 
+function headinfo() {
+  echo '<link rel="stylesheet" href="/wp-content/themes/minime/style.css">'; 
+}
 
+add_action('wp_head', 'headinfo');
 
 
 // Enable the option show in rest
