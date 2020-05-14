@@ -1,1 +1,57 @@
 /* Theme Name: Minime */
+
+.woocommerce-billing-fields__field-wrapper p {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.woocommerce-input-wrapper input {
+    padding: 0.4rem 0.4rem;
+    min-width: 15rem;
+}
+
+.woocommerce-additional-fields__field-wrapper p {
+  display: flex;
+  flex-direction: column;
+}
+
+table.shop_table.woocommerce-checkout-review-order-table {
+  border: #124b6c 1px solid;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+}
+/* Hide header - cart */
+
+section#one-page-shopping-cart {
+  display: none!important;
+}
+
+.woocommerce-form-coupon-toggle {
+  display: none;	
+}
+
+.one-page-shopping-add-to-cart span {
+	display: none;
+}
+
+.woocommerce-shipping-fields {
+  display: none;
+}
+
+form.checkout.woocommerce-checkout {
+  display: flex;
+}
+
+h3#order_review_heading {
+  display: none;
+}
+
+div#order_review {
+  padding: 0 3rem;
+}
+
+.woocommerce-checkout #payment {
+  background: #edf5ff;
+  border-radius: 5px;
+}
