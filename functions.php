@@ -31,6 +31,11 @@ add_filter( 'acf/rest_api/field_settings/show_in_rest', '__return_true' );
 // Enable the option edit in rest
 add_filter( 'acf/rest_api/field_settings/edit_in_rest', '__return_true' );
 
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'woocommerce_support' );
+
  /**
  Remove all possible fields
  **/
@@ -38,7 +43,7 @@ function wc_remove_checkout_fields( $fields ) {
 
     // Billing fields
     unset( $fields['billing']['billing_company'] );
-	unset( $fields['billing']['billing_country'] );
+	  unset( $fields['billing']['billing_country'] );
     //unset( $fields['billing']['billing_email'] );
     //unset( $fields['billing']['billing_phone'] );
     unset( $fields['billing']['billing_state'] );
@@ -66,13 +71,6 @@ function wc_remove_checkout_fields( $fields ) {
     return $fields;
 }
 add_filter( 'woocommerce_checkout_fields', 'wc_remove_checkout_fields' );
-
-add_action( 'woocommerce_single_product_summary', 'add_to_cart_button_woocommerce', 20 );
-function add_to_cart_button_woocommerce() {
-    echo '
-WooCommerce customize add to cart button
-';
-}
 
 function cc_mime_types($mimes) {
   $mimes['svg'] = 'image/svg+xml';
